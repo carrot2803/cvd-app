@@ -11,7 +11,7 @@ type PageNavigationProps = {
 
 interface SurveyPageProps {
 	title: string;
-	children: React.ReactNode;
+	children: ReactNode;
 	pageNumber: number;
 	totalPages: number;
 	onNext?: () => void;
@@ -20,4 +20,27 @@ interface SurveyPageProps {
 	isLastPage?: boolean;
 }
 
-export type { PageNavigationProps, SurveyPageProps };
+interface FormSubmitProps {
+	formData: Record<string, number>;
+	setShowResults: (show: boolean) => void;
+	setProbability: (value: string | null) => void;
+	setTopFeatures: (features: Array<[string, number]>) => void;
+}
+
+interface SurveyProps {
+	page: number;
+	formData: any;
+	handleNext: (data: any) => void;
+	handleBack: () => void;
+	setShowResults: (value: boolean) => void;
+	setProbability: (value: string | null) => void;
+	updateFormData: (newData: Record<string, any>) => void;
+	setTopFeatures: (features: Array<[string, number]>) => void;
+}
+
+export type {
+	PageNavigationProps,
+	SurveyPageProps,
+	FormSubmitProps,
+	SurveyProps,
+};

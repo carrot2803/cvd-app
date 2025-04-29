@@ -11,13 +11,12 @@ export function SurveyPageLayout({
     onSubmit,
     isLastPage = false
 }: SurveyPageProps) {
-    const handleSubmit = (e: React.FormEvent) => {
+    function handleSubmit(e: React.FormEvent) {
         e.preventDefault();
-        if (isLastPage && onSubmit) {
+        if (isLastPage && onSubmit)
             onSubmit();
-        } else if (onNext) {
+        else if (onNext)
             onNext();
-        }
     };
 
     return (
