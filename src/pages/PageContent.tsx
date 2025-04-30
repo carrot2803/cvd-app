@@ -1,10 +1,4 @@
-import {
-	Routes,
-	Route,
-	Navigate,
-	useNavigate,
-	useLocation,
-} from "react-router-dom";
+import { Routes, Route, Navigate, useNavigate } from "react-router-dom";
 import Results from "./Results";
 import Survey from "./Survey.tsx";
 import { useFormState } from "../hooks/useFormState";
@@ -16,7 +10,6 @@ export default function PageContent() {
 		page,
 		formData,
 		probability,
-		showResults,
 		topFeatures,
 		setProbability,
 		setTopFeatures,
@@ -28,29 +21,22 @@ export default function PageContent() {
 	} = useFormState();
 
 	const navigate = useNavigate();
-	const location = useLocation();
-
-	if (showResults && location.pathname !== "/results")
-		navigate("/results", { replace: true });
-	else if (!showResults && location.pathname === "/results")
-		navigate("/", { replace: true });
 
 	const setShowResultsWrapper = (value: boolean) => {
 		setShowResults(value);
-		if (value) navigate("/results");
-		else navigate("/");
+		if (value) navigate("/cvd-app/results");
 	};
 
 	const handleTakeAnotherSurveyWithRoute = () => {
 		handleTakeAnotherSurvey();
-		navigate("/");
+		navigate("/cvd-app", { replace: true });
 	};
 
 	return (
 		<>
 			<Routes>
 				<Route
-					path="/"
+					path="/cvd-app"
 					element={
 						<Survey
 							page={page}
@@ -66,7 +52,7 @@ export default function PageContent() {
 				/>
 
 				<Route
-					path="/results"
+					path="/cvd-app/results"
 					element={
 						<Results
 							probability={probability}
@@ -78,7 +64,7 @@ export default function PageContent() {
 					}
 				/>
 
-				<Route path="*" element={<Navigate replace to="/" />} />
+				<Route path="*" element={<Navigate replace to="/cvd-app" />} />
 			</Routes>
 			<GraphIcon />
 			<ChatIcon />

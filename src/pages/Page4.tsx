@@ -1,14 +1,20 @@
 import { RadioQuestion } from "../components/RadioQuestion";
 import { SurveyPageLayout } from "../components/SurveyLayout";
 import { useState, useEffect } from "react";
-import { PageProps } from "../utils";
+
+interface Page4Props {
+	formData: Record<string, any>;
+	submit: () => void;
+	onBack: () => void;
+	onFormDataChange?: (updatedFormData: Record<string, any>) => void;
+}
 
 export default function Page4({
 	formData,
 	submit,
 	onBack,
 	onFormDataChange,
-}: PageProps) {
+}: Page4Props) {
 	const [localFormData, setLocalFormData] = useState(formData || {});
 
 	useEffect(() => {

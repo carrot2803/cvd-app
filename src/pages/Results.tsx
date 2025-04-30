@@ -170,12 +170,12 @@ export default function Results({
 		<div className="bg-gray-50 flex items-center justify-center min-h-screen font-sans">
 			<div className="w-full max-w-xl bg-white shadow-lg rounded-lg px-8 pt-6 pb-8 my-4 mx-4">
 				<h1 className="text-3xl font-bold mb-3 text-center text-blue-600">
-					Heart Health Assessment
+					Cardiovascular Disease Assessment
 				</h1>
 
 				<div className="text-center">
 					<p className="text-gray-700 mb-5 text-lg">
-						Your heart disease probability is:
+						Your cardiovascular disease probability is:
 					</p>
 					<div
 						className="inline-block bg-blue-100 rounded-full px-8 py-4 cursor-pointer hover:bg-blue-200 transition-colors duration-300"

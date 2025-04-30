@@ -1,10 +1,10 @@
 export const plotOptions = [
-	{ name: "CVD Barplot", route: "cvd-barplot" },
-	{ name: "CVD Histogram", route: "cvd-histogram" },
-	{ name: "Age Distribution", route: "age-distribution" },
-	{ name: "Gender Analysis", route: "gender-analysis" },
-	{ name: "Risk Factor Correlation", route: "risk-correlation" },
-	{ name: "Treatment Outcomes", route: "treatment-outcomes" },
+	{ name: "BMI Density Curve", route: "cvd-app/bmi_density" },
+	{ name: "Body Mass Index", route: "cvd-app/bmi_distribution" },
+	{ name: "Correlation Matrix", route: "cvd-app/corr_matrix" },
+	{ name: "Chronic Conditions", route: "cvd-app/chronic_conditions" },
+	{ name: "Mobility Comparison", route: "cvd-app/mobility_issues" },
+	{ name: "Risk Factor Prevalence", route: "cvd-app/risk_prevalence" },
 ];
 
 export const numericalFields: string[] = [
