@@ -2,7 +2,7 @@ export const plotOptions = [
 	{ name: "BMI Density Curve", route: "cvd-app/bmi_density" },
 	{ name: "Body Mass Index", route: "cvd-app/bmi_distribution" },
 	{ name: "Correlation Matrix", route: "cvd-app/corr_matrix" },
-	{ name: "Chronic Conditions", route: "cvd-app/chronic_conditions" },
+	{ name: "Chronic Conditions", route: "cvd-app/chronic_condition" },
 	{ name: "Mobility Comparison", route: "cvd-app/mobility_issues" },
 	{ name: "Risk Factor Prevalence", route: "cvd-app/risk_prevalence" },
 ];
