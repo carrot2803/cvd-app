@@ -13,7 +13,6 @@ export function useFormSubmit({
 		try {
 			const allData = { ...formData, ...finalPageData };
 			const processedData = processFormData(allData);
-			console.log("Submitting data to backend:", processedData);
 
 			const response = await fetch(request, {
 				method: "POST",
@@ -29,7 +28,6 @@ export function useFormSubmit({
 			setProbability(result.probability);
 			setTopFeatures(result.top_features);
 			setShowResults(true);
-			console.log("Prediction result:", result);
 			return true;
 		} catch (error) {
 			console.error("Error submitting form:", error);

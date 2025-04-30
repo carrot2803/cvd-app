@@ -1,11 +1,7 @@
 import { SurveyPageLayout } from "../components/SurveyLayout";
+import { PageProps } from "../utils";
 
-interface Props {
-	onNext: () => void;
-	formData: Record<string, any>;
-}
-
-export default function Page1({ onNext, formData }: Props) {
+export default function Page1({ onNext, formData }: PageProps) {
 	return (
 		<SurveyPageLayout
 			title="DEMOGRAPHICS AND GENERAL HEALTH"

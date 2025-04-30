@@ -1,3 +1,12 @@
+export const plotOptions = [
+	{ name: "CVD Barplot", route: "cvd-barplot" },
+	{ name: "CVD Histogram", route: "cvd-histogram" },
+	{ name: "Age Distribution", route: "age-distribution" },
+	{ name: "Gender Analysis", route: "gender-analysis" },
+	{ name: "Risk Factor Correlation", route: "risk-correlation" },
+	{ name: "Treatment Outcomes", route: "treatment-outcomes" },
+];
+
 export const numericalFields: string[] = [
 	"Sex",
 	"PhysicalHealthDays",

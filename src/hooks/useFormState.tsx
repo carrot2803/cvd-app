@@ -12,9 +12,7 @@ export function useFormState() {
 		setPage((prev) => prev + 1);
 	};
 
-	const handleBack = () => {
-		setPage((prev) => prev - 1);
-	};
+	const handleBack = () => setPage((prev) => prev - 1);
 
 	const updateFormData = (newData: Record<string, any>) => {
 		setFormData((prev) => ({ ...prev, ...newData }));

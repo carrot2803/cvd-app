@@ -1,13 +1,7 @@
 import { RadioQuestion } from "../components/RadioQuestion";
 import { SurveyPageLayout } from "../components/SurveyLayout";
 import { useState, useEffect } from "react";
-
-interface PageProps {
-	formData: Record<string, any>;
-	onNext: () => void;
-	onBack: () => void;
-	onFormDataChange?: (updatedFormData: Record<string, any>) => void;
-}
+import { PageProps } from "../utils";
 
 export default function Page3({
 	formData,
@@ -28,9 +22,7 @@ export default function Page3({
 		};
 		setLocalFormData(updatedFormData);
 
-		if (onFormDataChange) {
-			onFormDataChange(updatedFormData);
-		}
+		if (onFormDataChange) onFormDataChange(updatedFormData);
 	};
 
 	return (

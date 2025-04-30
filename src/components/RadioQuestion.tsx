@@ -1,11 +1,5 @@
+import { RadioQuestionProps } from "../utils";
 import { YesNoRadioOption } from "./YesNoRadio";
-
-interface RadioQuestionProps {
-	question: string;
-	name: string;
-	defaultValue: string;
-	onChange?: (name: string, value: string) => void;
-}
 
 export function RadioQuestion({
 	question,

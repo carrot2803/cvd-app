@@ -1,8 +1,4 @@
-interface YesNoRadioOptionProps {
-	name: string;
-	value: string;
-	onChange?: (name: string, value: string) => void;
-}
+import { YesNoRadioOptionProps } from "../utils";
 
 export function YesNoRadioOption({
 	name,
@@ -10,9 +6,7 @@ export function YesNoRadioOption({
 	onChange,
 }: YesNoRadioOptionProps) {
 	const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-		if (onChange) {
-			onChange(name, e.target.value);
-		}
+		if (onChange) onChange(name, e.target.value);
 	};
 
 	return (

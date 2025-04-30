@@ -38,9 +38,41 @@ interface SurveyProps {
 	setTopFeatures: (features: Array<[string, number]>) => void;
 }
 
+interface Message {
+	id: number;
+	text: string;
+	isUser: boolean;
+	isLoading?: boolean;
+}
+
+interface PageProps {
+	formData: Record<string, any>;
+	submit?: () => void;
+	onBack?: () => void;
+	onNext?: () => void;
+	onFormDataChange?: (updatedFormData: Record<string, any>) => void;
+}
+
+interface YesNoRadioOptionProps {
+	name: string;
+	value: string;
+	onChange?: (name: string, value: string) => void;
+}
+
+interface RadioQuestionProps {
+	question: string;
+	name: string;
+	defaultValue: string;
+	onChange?: (name: string, value: string) => void;
+}
+
 export type {
 	PageNavigationProps,
 	SurveyPageProps,
 	FormSubmitProps,
 	SurveyProps,
+	PageProps,
+	Message,
+	YesNoRadioOptionProps,
+	RadioQuestionProps,
 };
