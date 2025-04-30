@@ -212,7 +212,7 @@ export default function ChatIcon() {
 								type="text"
 								value={inputText}
 								onChange={(e) => setInputText(e.target.value)}
-								onKeyPress={handleKeyPress}
+								onKeyUp={handleKeyPress}
 								placeholder="Type a message..."
 								className="flex-1 border border-gray-300 rounded-l-lg px-2 py-1 text-sm focus:outline-none focus:ring-1 focus:ring-blue-500"
 								disabled={isAiResponding}
@@ -224,7 +224,7 @@ export default function ChatIcon() {
 									isAiResponding || !inputText.trim()
 										? "bg-blue-400"
 										: "bg-blue-600 hover:bg-blue-700"
-								} text-white px-3 py-1 rounded-r-lg flex items-center justify-center`}
+								} text-white px-2 py-2 rounded-r-lg flex items-center justify-center`}
 							>
 								<SendIcon />
 							</button>
