@@ -8,7 +8,7 @@ export function useFormSubmit({
 	setTopFeatures,
 }: FormSubmitProps) {
 	async function handleSubmit(finalPageData: Record<string, number>) {
-		const request = import.meta.env.VITE_BACKEND + "/predict";
+		const request = import.meta.env.VITE_BACKEND + "/predict/5";
 
 		try {
 			const allData = { ...formData, ...finalPageData };
