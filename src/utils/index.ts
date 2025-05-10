@@ -1,4 +1,4 @@
-import { plotOptions } from "./data.ts";
+import { plotOptions, SYSTEM_INSTRUCTION } from "./data.ts";
 import {
 	FormSubmitProps,
 	Message,
@@ -21,4 +21,4 @@ export type {
 	RadioQuestionProps,
 };
 
-export { plotOptions };
+export { plotOptions, SYSTEM_INSTRUCTION };

@@ -1,12 +1,9 @@
 import { GoogleGenAI } from "@google/genai";
 import { useState, useEffect, useRef } from "react";
 import { Message } from "../utils/types";
+import { SYSTEM_INSTRUCTION } from "../utils";
 const KEY = import.meta.env.VITE_API_KEY;
 const ai = new GoogleGenAI({ apiKey: KEY });
-
-const SYSTEM_INSTRUCTION = `For context, you are a helpful AI assistant chatbot, for a cardiovascular disease forum which ask the user a series of questions and gives them a predicted chance of getting cardiovascular disease. 
-							Don't use rich text and help the user with whatever they ask once it's related to cardiovascular disease. If the user asks for information which you do not have access to (such as information placed in the site, 
-							kindly ask for the data and tell them you don't have access to that information as yet). Remember you are a chatbot so don't use overly long messages, make reponses a usual length of a chat message.`
 
 export default function ChatIcon() {
 	const [isOpen, setIsOpen] = useState(false);
